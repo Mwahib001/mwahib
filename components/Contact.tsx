@@ -44,7 +44,7 @@ export default function Contact() {
             <h3 className="text-xl font-bold text-white mb-2">Connect on WhatsApp</h3>
             <p className="text-gray-300 mb-4">Let's chat about your project</p>
             <a 
-              href="https://wa.me/your-number" 
+              href="https://wa.me/923154545055" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium transition-colors"
@@ -63,7 +63,7 @@ export default function Contact() {
             <h3 className="text-xl font-bold text-white mb-2">Connect on LinkedIn</h3>
             <p className="text-gray-300 mb-4">Let's connect professionally</p>
             <a 
-              href="https://linkedin.com/in/your-profile" 
+              href="https://www.linkedin.com/in/muhammad-wahib-85a836227/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
