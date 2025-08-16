@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Web Development (Frontend & Backend)",
+  "description": "You have solid experience in MERN stack (MongoDB, Express, React, Node.js) and Next.js (App Router), building full-stack apps including clones (Facebook, WhatsApp).",
+  "link": "#contact"
+  },
+  {
+    "title": "React & UI/UX Design",
+  "description": "You work with React, Next.js, Tailwind, Bootstrap, shadcn/ui, and design responsive, animated interfaces with modern layouts. You’ve also explored portfolio and hero section designs.",
+  "link": "#contact"
+  },
+  {
+    "title": "Backend Development & APIs",
+  "description": "Experience in Express.js, Payload CMS, Strapi CMS, and REST API integration. You’ve also integrated third-party APIs (20i.com, Amazon Affiliate API, CoinMarketCap, CoinGecko, WHMCS, Medusa.js).",
+  "link": "#contact"
+  },
+  {
+    "title": "Database Management",
+  "description": "Hands-on with MongoDB, PostgreSQL, Redis. You’ve solved connection/configuration issues (e.g., Medusa + Postgres + Redis setups).",
+  "link": "#contact"
+  },
+  {
+    "title": "Blockchain Development",
+  "description": "You’re learning smart contracts, ERC-4337 smart wallets, blockchain identity verification, Layer 2 scaling, IPFS integration. Also explored crypto investment knowledge, dApps, and ZeroDev for account abstraction.",
+  "link": "#contact"
+  },
+  {
+    "title": "Flutter Development",
+  "description": "Built a crypto app (coins, live charts, global insights, profit/loss, conversion, top gainers/losers, favorites, news). You’ve also integrated Firebase authentication.",
+  "link": "#contact"
+  },
+  {
+    "title": "CMS Expertise",
+  "description": "Experience with Payload CMS and Strapi CMS for headless content management, syncing with APIs, and frontend rendering.",
+  "link": "#contact"
+  },
+  {
+    "title": "Cloud & Deployment",
+  "description": "Worked with Amazon services (affiliate APIs), and explored GitHub repo pushing and CMS hosting setups.",
+  "link": "#contact"
+  },
+  {
+    "title": "Software Engineering & Re-engineering",
+  "description": "Studied CSE327 – Software Re-Engineering, focusing on code optimization, architecture, and workflows.",
+  "link": "#contact"
+  },
+  {
+    "title": "Problem-Solving & Debugging",
+  "description": "Dealt with Redis, Medusa.js module errors, frontend CSS issues, Next.js state management, and database loaders.",
+  "link": "#contact"
+  },
+  {
+    "title": "Project Management & Learning",
+  "description": "Created school/university projects (crypto app, Flutter projects, blockchain projects). Following Udemy blockchain course. Preparing for Advanced Web Technologies final exam.",
+  "link": "#contact"
+  },
+  {
+    "title": "Soft Skills",
+  "description": "Research skills: Searching for best UI/UX designs, API documentation. Self-learning: Picking up Payload, Medusa, Blockchain, Flutter quickly. Adaptability: Switching between stacks (Flutter, MERN, Next.js, Blockchain).",
+  "link": "#contact"
+  }
+]

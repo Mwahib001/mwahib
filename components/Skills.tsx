@@ -1,7 +1,18 @@
 "use client";
 import { useState, useEffect } from "react";
+import skillsData from "../data/skills.json";
+// For scrolling to Contact
+import { useRef } from "react";
 
 export default function Skills() {
+  // Find the Contact section by id for smooth scroll
+  const handleContactScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const contactSection = document.getElementById("contact-section");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slidesToShow, setSlidesToShow] = useState(3);
 
@@ -21,23 +32,7 @@ export default function Skills() {
     return () => window.removeEventListener('resize', updateSlidesToShow);
   }, []);
 
-  const skillsData = [
-    {
-      title: "Frontend Development",
-      description: "Expert in React, Next.js, TypeScript, and modern CSS frameworks. Creating responsive and interactive user interfaces with clean, maintainable code.",
-      link: "Hello →"
-    },
-    {
-      title: "Backend Development",
-      description: "Proficient in Node.js, Express, Python, and database management. Building scalable APIs and server-side applications with best practices.",
-      link: "Hello →"
-    },
-    {
-      title: "Full Stack Solutions",
-      description: "End-to-end development expertise combining frontend and backend technologies. Delivering complete web applications with optimal performance.",
-      link: "Hello →"
-    }
-  ];
+  // skillsData is now imported from JSON
 
   const nextSlide = () => {
     const maxSlides = Math.max(0, skillsData.length - slidesToShow);
@@ -65,21 +60,22 @@ export default function Skills() {
                style={{ transform: `translateX(-${currentSlide * (100 / slidesToShow)}%)` }}>
             {skillsData.map((skill, index) => (
               <div key={index} className={`flex-shrink-0 px-4 ${slidesToShow === 3 ? 'w-1/3' : slidesToShow === 2 ? 'w-1/2' : 'w-full'}`}>
-                <div className="bg-gray-900 rounded-xl p-8 h-80 flex flex-col justify-between">
-                  <div>
+                <div className="bg-gray-900 rounded-xl p-8 min-h-[370px] flex flex-col h-full">
+                  <div className="flex-1 flex flex-col">
                     <h3 className="text-2xl font-bold text-white mb-4">
                       {skill.title}
                     </h3>
-                    <p className="text-gray-300 leading-relaxed">
+                    <p className="text-gray-300 leading-relaxed mb-6 flex-1">
                       {skill.description}
                     </p>
                   </div>
-                  <div className="mt-6">
-                    <a 
-                      href="#" 
+                  <div className="pt-2 mt-auto">
+                    <a
+                      href="#"
+                      onClick={handleContactScroll}
                       className="inline-flex items-center text-green-500 hover:text-green-400 font-medium transition-colors"
                     >
-                      {skill.link}
+                      Contact Me →
                     </a>
                   </div>
                 </div>
