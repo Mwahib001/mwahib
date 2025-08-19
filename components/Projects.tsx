@@ -24,7 +24,7 @@ export default function Projects() {
   ];
 
   return (
-    <section className="bg-black py-20">
+    <section id="projects" className="bg-black py-20">
       <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
         {/* Section Heading */}
         <div className="text-center mb-16">

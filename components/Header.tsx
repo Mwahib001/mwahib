@@ -1,5 +1,14 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
+
+const navigation = [
+  { name: 'Home', href: '#home' },
+  { name: 'About Me', href: '#about' },
+  { name: 'Skills', href: '#skills' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Contact', href: '#contact' },
+];
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,45 +17,48 @@ export default function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      // Update URL without page reload
+      window.history.pushState({}, '', href);
+      // Close mobile menu if open
+      setIsMenuOpen(false);
+    }
+  };
+
   return (
-    <header className="bg-black shadow-sm border-none">
+    <header className="sticky top-0 z-50 bg-black bg-opacity-90 backdrop-blur-sm shadow-sm border-b border-gray-800">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Left side - Name */}
-          <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-white font-sans tracking-wider">Muhammad Wahib</h1>
-          </div>
+          <a 
+            href="#home" 
+            onClick={(e) => handleNavClick(e, '#home')}
+            className="text-2xl font-bold text-white font-sans tracking-wider hover:text-green-500 transition-colors"
+          >
+            Muhammad Wahib
+          </a>
 
           {/* Desktop Navigation - Right side */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-6">
+              {navigation.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="text-white hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >
+                  {item.name}
+                </a>
+              ))}
               <a
-                href="#"
-                className="text-white hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                Home
-              </a>
-              <a
-                href="#"
-                className="text-white hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                About me
-              </a>
-              <a
-                href="#"
-                className="text-white hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                Projects
-              </a>
-              <a
-                href="#"
-                className="text-white hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                Skills
-              </a>
-              <a
-                href="#"
-                className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-4xl text-sm font-medium transition-colors"
+                href="#contact"
+                onClick={(e) => handleNavClick(e, '#contact')}
+                className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors"
               >
                 Contact me
               </a>
@@ -100,32 +112,19 @@ export default function Header() {
         {/* Mobile menu dropdown */}
         <div className={`${isMenuOpen ? "block" : "hidden"} md:hidden`}>
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black border-t">
+            {navigation.map((item) => (
+              <a
+                key={`mobile-${item.name}`}
+                href={item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
+                className="text-white hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+              >
+                {item.name}
+              </a>
+            ))}
             <a
-              href="#"
-              className="text-white hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium transition-colors"
-            >
-              Home
-            </a>
-            <a
-              href="#"
-              className="text-white hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium transition-colors"
-            >
-              About me
-            </a>
-            <a
-              href="#"
-              className="text-white hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium transition-colors"
-            >
-              Projects
-            </a>
-            <a
-              href="#"
-              className="text-white hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium transition-colors"
-            >
-              Skills
-            </a>
-            <a
-              href="#"
+              href="#contact"
+              onClick={(e) => handleNavClick(e, '#contact')}
               className="bg-green-600 hover:bg-green-700 text-white block px-3 py-2 rounded-md text-base font-medium transition-colors"
             >
               Contact me

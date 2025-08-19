@@ -3,19 +3,18 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="bg-black py-20">
-      <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
+    <section id="home" className="bg-black py-12 md:py-20 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Side - Text Content */}
-          <div>
-            <h1 className="text-2xl text-white mb-2">
+          <div className="w-full overflow-hidden">
+            <h1 className="text-xl md:text-2xl text-white mb-2">
               HELLO, I AM
             </h1>
-            <h1 className="text-6xl font-bold text-white mb-4">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 break-words">
               MUHAMMAD WAHIB
             </h1>
-            <h2 className="text-2xl text-green-500 mb-6">
+            <h2 className="text-xl md:text-2xl text-green-500 mb-6">
               I AM Web Developer
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
@@ -34,9 +33,9 @@ export default function Hero() {
               <div className="w-96 h-96 bg-green-500 rounded-full flex items-center justify-center">
                 {/* Profile Image */}
                 <Image
-                  src="/profile.png"
+                  src="/wahib.png"
                   alt="Muhammad Wahib"
-                  width={620}
+                  width={820}
                   height={320}
                   className=""
                 />
