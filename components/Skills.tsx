@@ -1,8 +1,14 @@
 "use client";
-import { useState, useEffect } from "react";
-import skillsData from "../data/skills.json";
-// For scrolling to Contact
 import { useRef } from "react";
+import skillsData from "../data/skills.json";
+import Autoplay from "embla-carousel-autoplay";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export default function Skills() {
   // Find the Contact section by id for smooth scroll
@@ -13,35 +19,13 @@ export default function Skills() {
       contactSection.scrollIntoView({ behavior: "smooth" });
     }
   };
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [slidesToShow, setSlidesToShow] = useState(3);
-
-  useEffect(() => {
-    const updateSlidesToShow = () => {
-      if (window.innerWidth >= 1024) {
-        setSlidesToShow(3);
-      } else if (window.innerWidth >= 768) {
-        setSlidesToShow(2);
-      } else {
-        setSlidesToShow(1);
-      }
-    };
-
-    updateSlidesToShow();
-    window.addEventListener('resize', updateSlidesToShow);
-    return () => window.removeEventListener('resize', updateSlidesToShow);
-  }, []);
-
-  // skillsData is now imported from JSON
-
-  const nextSlide = () => {
-    const maxSlides = Math.max(0, skillsData.length - slidesToShow);
-    setCurrentSlide((prev) => Math.min(prev + 1, maxSlides));
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => Math.max(prev - 1, 0));
-  };
+  const plugin = useRef(
+    Autoplay({
+      delay: 3000,
+      stopOnInteraction: true,
+    })
+  );
+  const carouselRef = useRef<HTMLDivElement>(null);
 
   return (
     <section id="skills" className="bg-black py-20">
@@ -54,69 +38,50 @@ export default function Skills() {
         </div>
 
         {/* Carousel Container */}
-        <div className="relative overflow-hidden">
-          {/* Carousel Track */}
-          <div className="flex transition-transform duration-500 ease-in-out" 
-               style={{ transform: `translateX(-${currentSlide * (100 / slidesToShow)}%)` }}>
-            {skillsData.map((skill, index) => (
-              <div key={index} className={`flex-shrink-0 px-4 ${slidesToShow === 3 ? 'w-1/3' : slidesToShow === 2 ? 'w-1/2' : 'w-full'}`}>
-                <div className="bg-gray-900 rounded-xl p-8 min-h-[370px] flex flex-col h-full">
-                  <div className="flex-1 flex flex-col">
-                    <h3 className="text-2xl font-bold text-white mb-4">
-                      {skill.title}
-                    </h3>
-                    <p className="text-gray-300 leading-relaxed mb-6 flex-1">
-                      {skill.description}
-                    </p>
-                  </div>
-                  <div className="pt-2 mt-auto">
-                    <a
-                      href="#"
-                      onClick={handleContactScroll}
-                      className="inline-flex items-center text-green-500 hover:text-green-400 font-medium transition-colors"
-                    >
-                      Contact Me →
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Navigation Buttons */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg transition-colors"
-            aria-label="Previous slide"
+        <div className="relative px-8 md:px-12" ref={carouselRef}>
+          <Carousel
+            plugins={[plugin.current]}
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full group"
+            onMouseEnter={plugin.current.stop}
+            onMouseLeave={plugin.current.reset}
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg transition-colors"
-            aria-label="Next slide"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-
-          {/* Dots Indicator */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {Array.from({ length: Math.max(1, skillsData.length - slidesToShow + 1) }, (_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentSlide ? 'bg-green-500' : 'bg-gray-600'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
+            <CarouselContent className="-ml-4">
+              {skillsData.map((skill, index) => (
+                <CarouselItem 
+                  key={index} 
+                  className="pl-4 md:basis-1/2 lg:basis-1/3"
+                >
+                  <div className="bg-gray-900 rounded-xl p-8 min-h-[370px] flex flex-col h-full transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
+                    <div className="flex-1 flex flex-col">
+                      <h3 className="text-2xl font-bold text-white mb-4">
+                        {skill.title}
+                      </h3>
+                      <p className="text-gray-300 leading-relaxed mb-6 flex-1">
+                        {skill.description}
+                      </p>
+                    </div>
+                    <div className="pt-2 mt-auto">
+                      <a
+                        href="#"
+                        onClick={handleContactScroll}
+                        className="inline-flex items-center text-green-500 hover:text-green-400 font-medium transition-colors"
+                      >
+                        Contact Me →
+                      </a>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            
+            {/* Navigation Buttons */}
+            <CarouselPrevious className="left-0 -translate-x-2 md:-translate-x-4 bg-transparent hover:bg-green-500/90 text-white p-3 rounded-full shadow-lg transition-all duration-300 opacity-0 group-hover:opacity-100 border-2 border-white/20 hover:border-transparent" />
+            <CarouselNext className="right-0 translate-x-2 md:translate-x-4 bg-transparent hover:bg-green-500/90 text-white p-3 rounded-full shadow-lg transition-all duration-300 opacity-0 group-hover:opacity-100 border-2 border-white/20 hover:border-transparent" />
+          </Carousel>
         </div>
       </div>
     </section>

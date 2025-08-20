@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <div className="bg-gray-900" style={{ width: '100%', height: '24px' }} />
+      {/* <div className="bg-gray-900" style={{ width: '100%', height: '24px' }} /> */}
       <Hero />
       <Skills />
       <Projects />
