@@ -4,10 +4,8 @@ import Link from "next/link";
 
 const navigation = [
   { name: 'Home', href: '#home' },
-  { name: 'About Me', href: '#about' },
   { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
-  { name: 'Contact', href: '#contact' },
 ];
 
 export default function Header() {
