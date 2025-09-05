@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Theme Bazaar Pro MUI Integration With PayloadCMS",
+    "description": "Developed a custom integration of PayloadCMS with the Barzaar Pro theme to enable fully dynamic layouts and content management. This project highlights my ability to transform static templates into scalable, CMS-driven solutions for real-world e-commerce use cases.",
+    "image": "/projects/bazaarProAdmin.png",
+    "link": "https://bazaar-pro4-mui-mcr3.vercel.app/admin"
+  },
+  {
+    "title": "Waqar Law Porfolio Website With PayloadCMS for Dynamic Content and Records Management",
+    "description": "Integrated PayloadCMS with a custom frontend to enable dynamic content and records management, along with Cloudinary for media storage. Deployed on Vercel with MongoDB integration, showcasing expertise in full-stack CMS-driven solutions and scalable deployments.",
+    "image": "/projects/waqarLawAdmin.png",
+    "link": "https://new-waqarlaw-com.vercel.app/admin"
+  },
+  {
+    "title": "Innovate Consults Portfolio Website",
+    "description": "Created and integrated PayloadCMS to power dynamic content with role-based access control and Cloudinary for media storage. Deployed on Vercel with MongoDB database integration, ensuring a secure, scalable, and CMS-driven solution..",
+    "image": "/projects/innovateConsultsAdmin.png",
+    "link": "https://new-innovateconsults-com.vercel.app/admin"
+  }
+]

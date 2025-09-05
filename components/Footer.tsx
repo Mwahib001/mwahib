@@ -52,7 +52,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-background/80 py-8 border-t border-border/30 backdrop-blur-sm relative overflow-hidden">
+    <footer className="bg-background/80 py-6 border-t border-border/30 backdrop-blur-sm relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           
@@ -77,7 +77,7 @@ export default function Footer() {
 
           {/* Right Column - Privacy & Copyright */}
           <div className="text-right">
-            <div className="mt-8 pt-8 border-t border-border/20 text-center md:text-right">
+            <div className="mt-2 pt-2 border-t border-border/20 text-center md:text-right">
               <p className="mb-2">
                 {currentYear} Muhammad Wahib. All rights reserved.
               </p>

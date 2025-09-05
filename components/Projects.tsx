@@ -1,28 +1,8 @@
 "use client";
 import Image from "next/image";
+import projectsData from "@/data/projects.json";
 
 export default function Projects() {
-  const projectsData = [
-    {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution built with Next.js, featuring user authentication, payment integration, and admin dashboard.",
-      image: "/project1.jpg",
-      link: "See Project →"
-    },
-    {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "/project2.jpg",
-      link: "See Project →"
-    },
-    {
-      title: "Portfolio Website",
-      description: "A modern, responsive portfolio website showcasing creative work with smooth animations and optimized performance.",
-      image: "/project3.jpg",
-      link: "See Project →"
-    }
-  ];
-
   return (
     <section id="projects" className="py-20 bg-background relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
@@ -56,10 +36,10 @@ export default function Projects() {
                   {project.description}
                 </p>
                 <a 
-                  href="#" 
+                  href={project.link}
                   className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors group"
                 >
-                  <span className="group-hover:translate-x-1 transition-transform">{project.link}</span>
+                  <span className="group-hover:translate-x-1 transition-transform">See Project →</span>
                 </a>
               </div>
             </div>

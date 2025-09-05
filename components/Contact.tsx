@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 bg-background/90 relative overflow-hidden"
+      className="py-20 bg-background relative overflow-hidden"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
