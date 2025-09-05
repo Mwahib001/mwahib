@@ -24,11 +24,11 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="bg-black py-20">
+    <section id="projects" className="py-20 bg-background relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
         {/* Section Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-green-500 mb-4">
+          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent mb-4">
             Featured Projects
           </h2>
         </div>
@@ -36,30 +36,30 @@ export default function Projects() {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectsData.map((project, index) => (
-            <div key={index} className="bg-gray-900 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
+            <div key={index} className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl overflow-hidden hover:shadow-[0_0_25px] hover:shadow-primary/20 transition-all duration-300 hover:border-primary/50">
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
+                  className="object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
               
               {/* Project Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3">
+                <h3 className="text-xl font-bold text-foreground mb-3">
                   {project.title}
                 </h3>
-                <p className="text-gray-300 leading-relaxed mb-4">
+                <p className="text-muted-foreground leading-relaxed mb-4">
                   {project.description}
                 </p>
                 <a 
                   href="#" 
-                  className="inline-flex items-center text-green-500 hover:text-green-400 font-medium transition-colors"
+                  className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors group"
                 >
-                  {project.link}
+                  <span className="group-hover:translate-x-1 transition-transform">{project.link}</span>
                 </a>
               </div>
             </div>

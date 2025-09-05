@@ -80,7 +80,7 @@ export function ContactForm() {
 
   return (
     <div className="w-full">
-      <h2 className="text-2xl font-bold mb-6 text-white">Get in Touch</h2>
+      <h2 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">Get in Touch</h2>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -89,15 +89,15 @@ export function ContactForm() {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-gray-300">Name</FormLabel>
+                  <FormLabel className="text-foreground/90">Name</FormLabel>
                   <FormControl>
                     <Input 
                       placeholder="Your name" 
-                      className="bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-green-500 focus:ring-green-500"
+                      className="bg-card/50 border-border/50 text-foreground placeholder-muted-foreground/60 focus:border-primary focus:ring-1 focus:ring-primary/50"
                       {...field} 
                     />
                   </FormControl>
-                  <FormMessage className="text-red-400" />
+                  <FormMessage className="text-destructive" />
                 </FormItem>
               )}
             />
@@ -106,15 +106,16 @@ export function ContactForm() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-gray-300">Email</FormLabel>
+                  <FormLabel className="text-foreground/90">Email</FormLabel>
                   <FormControl>
                     <Input 
-                      placeholder="yourname@gmail.com" 
-                      className="bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-green-500 focus:ring-green-500"
+                      type="email"
+                      placeholder="Your email" 
+                      className="bg-card/50 border-border/50 text-foreground placeholder-muted-foreground/60 focus:border-primary focus:ring-1 focus:ring-primary/50"
                       {...field} 
                     />
                   </FormControl>
-                  <FormMessage className="text-red-400" />
+                  <FormMessage className="text-destructive" />
                 </FormItem>
               )}
             />
@@ -125,15 +126,15 @@ export function ContactForm() {
             name="subject"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-gray-300">Subject</FormLabel>
+                <FormLabel className="text-foreground/90">Subject</FormLabel>
                 <FormControl>
                   <Input 
                     placeholder="What's this about?" 
-                    className="bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-green-500 focus:ring-green-500"
+                    className="bg-card/50 border-border/50 text-foreground placeholder-muted-foreground/60 focus:border-primary focus:ring-1 focus:ring-primary/50"
                     {...field} 
                   />
                 </FormControl>
-                <FormMessage className="text-red-400" />
+                <FormMessage className="text-destructive" />
               </FormItem>
             )}
           />
@@ -143,24 +144,24 @@ export function ContactForm() {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-gray-300">Message</FormLabel>
+                <FormLabel className="text-foreground/90">Message</FormLabel>
                 <FormControl>
                   <Textarea 
-                    placeholder="Your message here..." 
-                    className="min-h-[120px] bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-green-500 focus:ring-green-500"
+                    placeholder="Your message"
+                    className="min-h-[150px] bg-card/50 border-border/50 text-foreground placeholder-muted-foreground/60 focus:border-primary focus:ring-1 focus:ring-primary/50"
                     {...field} 
                   />
                 </FormControl>
-                <FormMessage className="text-red-400" />
+                <FormMessage className="text-destructive" />
               </FormItem>
             )}
           />
           
           <div className="flex justify-end">
             <Button 
-              type="submit" 
-              className="w-full sm:w-auto bg-gray-800 text-white hover:bg-green-600 hover:text-white transition-colors border border-gray-700"
               disabled={isLoading}
+              className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground font-medium py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-[0_0_15px] hover:shadow-primary/40"
+              type="submit"
             >
               {isLoading ? "Sending..." : "Send Message"}
             </Button>

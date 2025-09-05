@@ -52,13 +52,13 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-black py-12 border-t border-gray-800">
+    <footer className="bg-background/80 py-8 border-t border-border/30 backdrop-blur-sm relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           
           {/* Left Column - Social Links */}
           <div>
-            <h3 className="text-xl font-bold text-white mb-4">Connect With Me</h3>
+            <h3 className="text-xl font-bold text-foreground mb-4">Connect With Me</h3>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
                 <a
@@ -66,7 +66,7 @@ export default function Footer() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-green-500 transition-colors duration-300"
+                  className="text-muted-foreground/80 hover:text-primary transition-all duration-300 hover:scale-110"
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -77,26 +77,26 @@ export default function Footer() {
 
           {/* Right Column - Privacy & Copyright */}
           <div className="text-right">
-            <div className="text-gray-400 text-sm">
+            <div className="mt-8 pt-8 border-t border-border/20 text-center md:text-right">
               <p className="mb-2">
-                © {currentYear} Muhammad Wahib. All rights reserved.
+                {currentYear} Muhammad Wahib. All rights reserved.
               </p>
               <div className="flex justify-end space-x-4 text-xs">
                 <a 
                   href="#" 
-                  className="hover:text-green-500 transition-colors duration-300"
+                  className="hover:text-primary transition-colors duration-300 hover:underline underline-offset-4"
                 >
                   Privacy Policy
                 </a>
                 <a 
                   href="#" 
-                  className="hover:text-green-500 transition-colors duration-300"
+                  className="hover:text-primary transition-colors duration-300 hover:underline underline-offset-4"
                 >
                   Terms of Service
                 </a>
                 <a 
                   href="#" 
-                  className="hover:text-green-500 transition-colors duration-300"
+                  className="hover:text-primary transition-colors duration-300 hover:underline underline-offset-4"
                 >
                   Cookie Policy
                 </a>

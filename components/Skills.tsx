@@ -1,14 +1,5 @@
 "use client";
-import { useRef } from "react";
 import skillsData from "../data/skills.json";
-import Autoplay from "embla-carousel-autoplay";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 
 export default function Skills() {
   // Find the Contact section by id for smooth scroll
@@ -19,69 +10,43 @@ export default function Skills() {
       contactSection.scrollIntoView({ behavior: "smooth" });
     }
   };
-  const plugin = useRef(
-    Autoplay({
-      delay: 3000,
-      stopOnInteraction: true,
-    })
-  );
-  const carouselRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section id="skills" className="bg-black py-20">
-      <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
+    <section id="skills" className="py-20 bg-background relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-green-500 mb-4">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent mb-4">
             Skills & Expertise
           </h2>
         </div>
 
-        {/* Carousel Container */}
-        <div className="relative px-8 md:px-12" ref={carouselRef}>
-          <Carousel
-            plugins={[plugin.current]}
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full group"
-            onMouseEnter={plugin.current.stop}
-            onMouseLeave={plugin.current.reset}
-          >
-            <CarouselContent className="-ml-4">
-              {skillsData.map((skill, index) => (
-                <CarouselItem 
-                  key={index} 
-                  className="pl-4 md:basis-1/2 lg:basis-1/3"
+        {/* Grid Container */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+          {skillsData.map((skill, index) => (
+            <div 
+              key={index}
+              className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-8 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px] hover:shadow-primary/20 h-full flex flex-col hover:border-primary/50"
+            >
+              <div className="flex-1 flex flex-col">
+                <h3 className="text-2xl font-bold text-foreground mb-4">
+                  {skill.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-6 flex-1">
+                  {skill.description}
+                </p>
+              </div>
+              <div className="pt-2 mt-auto">
+                <a
+                  href="#"
+                  onClick={handleContactScroll}
+                  className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors group"
                 >
-                  <div className="bg-gray-900 rounded-xl p-8 min-h-[370px] flex flex-col h-full transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
-                    <div className="flex-1 flex flex-col">
-                      <h3 className="text-2xl font-bold text-white mb-4">
-                        {skill.title}
-                      </h3>
-                      <p className="text-gray-300 leading-relaxed mb-6 flex-1">
-                        {skill.description}
-                      </p>
-                    </div>
-                    <div className="pt-2 mt-auto">
-                      <a
-                        href="#"
-                        onClick={handleContactScroll}
-                        className="inline-flex items-center text-green-500 hover:text-green-400 font-medium transition-colors"
-                      >
-                        Contact Me →
-                      </a>
-                    </div>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            
-            {/* Navigation Buttons */}
-            <CarouselPrevious className="left-0 -translate-x-2 md:-translate-x-4 bg-transparent hover:bg-green-500/90 text-white p-3 rounded-full shadow-lg transition-all duration-300 opacity-0 group-hover:opacity-100 border-2 border-white/20 hover:border-transparent" />
-            <CarouselNext className="right-0 translate-x-2 md:translate-x-4 bg-transparent hover:bg-green-500/90 text-white p-3 rounded-full shadow-lg transition-all duration-300 opacity-0 group-hover:opacity-100 border-2 border-white/20 hover:border-transparent" />
-          </Carousel>
+                  <span className="group-hover:translate-x-1 transition-transform">Contact Me →</span>
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
