@@ -44,14 +44,14 @@ export default function Hero() {
               <div className="mt-6 w-full flex justify-center gap-4">
                 {/* First Experience Card */}
                 <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl shadow-lg p-3 w-32 h-24 flex flex-col justify-center items-center hover:border-primary/50 transition-all duration-300">
-                  <h1 className="text-2xl font-bold text-white mb-1">6+</h1>
+                  <h1 className="text-2xl font-bold text-white mb-1">1+</h1>
                   <p className="text-xs text-gray-300 text-center leading-tight">Years of Experience</p>
                 </div>
                 
                 {/* Second Experience Card */}
                 <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl shadow-lg p-3 w-32 h-24 flex flex-col justify-center items-center hover:border-primary/50 transition-all duration-300">
-                  <h1 className="text-2xl font-bold text-white mb-1">100+</h1>
-                  <p className="text-xs text-gray-300 text-center leading-tight">Completed Projects</p>
+                  <h1 className="text-2xl font-bold text-white mb-1">4+</h1>
+                  <p className="text-xs text-gray-300 text-center leading-tight">Completed Projects During Internship</p>
                 </div>
               </div>
             </div>
