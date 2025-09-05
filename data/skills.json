@@ -1,22 +1,39 @@
 [
   {
     "title": "Full-Stack Web Development",
-    "description": "I build full-stack apps using MERN & Next.js, including Facebook/WhatsApp clones and custom business apps.",
+    "description": "I build full-stack apps using MERN & Next.js, including clones and custom business apps.",
     "link": "#contact"
   },
+
+  {
+    "title": "CMS & Integrations",
+    "description": "Strong experience with Payload & Strapi, Cloudinary media handling, and authentication systems (Nodemailer, Firebase).",
+    "link": "#contact"
+  },
+  {
+    "title": "Backend & APIs",
+    "description": "I create scalable backends with Express.js, Payload CMS, Strapi, and integrate third-party APIs (CoinGecko, WHMCS).",
+    "link": "#contact"
+  },
+  {
+    "title": "Databases",
+    "description": "Experienced with MongoDB, PostgreSQL, and Redis for high-performance, reliable data management.",
+    "link": "#contact"
+  },
+
   {
     "title": "Frontend & UI/UX",
     "description": "I design responsive, animated interfaces with React, Tailwind, and shadcn/ui, delivering clean and modern user experiences.",
     "link": "#contact"
   },
   {
-    "title": "Backend & APIs",
-    "description": "I create scalable backends with Express.js, Payload CMS, Strapi, and integrate third-party APIs (Amazon, CoinGecko, WHMCS).",
+    "title": "DevOps & Deployment",
+    "description": "Deployed apps on GitHub and CMS hosting setups, managed branches, and automated cloud integrations. Managed teams of 3+ members on Github.",
     "link": "#contact"
   },
   {
-    "title": "Databases",
-    "description": "Experienced with MongoDB, PostgreSQL, and Redis for high-performance, reliable data management.",
+    "title": "Problem-Solving",
+    "description": "Skilled in debugging complex issues with Redis, Medusa, Payload CMS, and frontend styling in Next.js.",
     "link": "#contact"
   },
   {
@@ -27,21 +44,6 @@
   {
     "title": "Blockchain",
     "description": "Exploring smart contracts, Layer 2 scaling, and dApps, with hands-on experience in ERC-4337 wallets & IPFS integration.",
-    "link": "#contact"
-  },
-  {
-    "title": "CMS & Integrations",
-    "description": "Strong experience with Payload & Strapi, Cloudinary media handling, and authentication systems (Nodemailer, Firebase).",
-    "link": "#contact"
-  },
-  {
-    "title": "DevOps & Deployment",
-    "description": "Deployed apps on GitHub and CMS hosting setups, managed branches, and automated cloud integrations.",
-    "link": "#contact"
-  },
-  {
-    "title": "Problem-Solving",
-    "description": "Skilled in debugging complex issues with Redis, Medusa, Payload CMS, and frontend styling in Next.js.",
     "link": "#contact"
   },
   {
