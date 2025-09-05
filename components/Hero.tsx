@@ -8,16 +8,16 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Side - Text Content */}
           <div className="w-full overflow-hidden">
-            <h1 className="text-xl md:text-2xl text-white mb-2">
+            <h1 className="text-xl md:text-2xl text-foreground mb-2">
               <span className="text-primary">HELLO, I AM</span>
             </h1>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 break-words">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-4 break-words">
               MUHAMMAD WAHIB
             </h1>
             <h2 className="text-xl md:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent mb-6">
               I AM Web Developer
             </h2>
-            <p className="text-gray-300 text-lg leading-relaxed mb-8">
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Passionate about creating innovative web solutions and turning ideas into reality. 
               I specialize in building modern, responsive applications that deliver exceptional user experiences.
             </p>
@@ -44,14 +44,14 @@ export default function Hero() {
               <div className="mt-6 w-full flex justify-center gap-4">
                 {/* First Experience Card */}
                 <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl shadow-lg p-3 w-32 h-24 flex flex-col justify-center items-center hover:border-primary/50 transition-all duration-300">
-                  <h1 className="text-2xl font-bold text-white mb-1">1+</h1>
-                  <p className="text-xs text-gray-300 text-center leading-tight">Years of Experience</p>
+                  <h1 className="text-2xl font-bold text-foreground mb-1">1+</h1>
+                  <p className="text-xs text-muted-foreground text-center leading-tight">Years of Experience</p>
                 </div>
                 
                 {/* Second Experience Card */}
                 <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl shadow-lg p-3 w-32 h-24 flex flex-col justify-center items-center hover:border-primary/50 transition-all duration-300">
-                  <h1 className="text-2xl font-bold text-white mb-1">4+</h1>
-                  <p className="text-xs text-gray-300 text-center leading-tight">Completed Projects During Internship</p>
+                  <h1 className="text-2xl font-bold text-foreground mb-1">4+</h1>
+                  <p className="text-xs text-muted-foreground text-center leading-tight">Completed Projects During Internship</p>
                 </div>
               </div>
             </div>
