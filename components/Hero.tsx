@@ -3,7 +3,10 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section id="home" className="bg-background py-12 md:py-20 overflow-x-hidden relative">
+    <section
+      id="home"
+      className="bg-background py-12 md:py-20 overflow-x-hidden relative"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Side - Text Content */}
@@ -15,11 +18,12 @@ export default function Hero() {
               MUHAMMAD WAHIB
             </h1>
             <h2 className="text-xl md:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent mb-6">
-              I AM Web Developer
+              I AM Software Engineer
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Passionate about creating innovative web solutions and turning ideas into reality. 
-              I specialize in building modern, responsive applications that deliver exceptional user experiences.
+              As a Software Engineer, I bring a strong engineering mindset into
+              web development, creating scalable products with clean code,
+              modern tools, and thoughtful architecture.
             </p>
             <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-[0_0_15px] hover:shadow-primary/40">
               Contact
@@ -39,19 +43,27 @@ export default function Hero() {
                   className="object-cover w-full h-full"
                 />
               </div>
-              
+
               {/* Experience Cards - Positioned below the circle */}
               <div className="mt-6 w-full flex justify-center gap-4">
                 {/* First Experience Card */}
                 <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl shadow-lg p-3 w-32 h-24 flex flex-col justify-center items-center hover:border-primary/50 transition-all duration-300">
-                  <h1 className="text-2xl font-bold text-foreground mb-1">1+</h1>
-                  <p className="text-xs text-muted-foreground text-center leading-tight">Years of Experience</p>
+                  <h1 className="text-2xl font-bold text-foreground mb-1">
+                    1+
+                  </h1>
+                  <p className="text-xs text-muted-foreground text-center leading-tight">
+                    Years of Experience
+                  </p>
                 </div>
-                
+
                 {/* Second Experience Card */}
                 <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl shadow-lg p-3 w-32 h-24 flex flex-col justify-center items-center hover:border-primary/50 transition-all duration-300">
-                  <h1 className="text-2xl font-bold text-foreground mb-1">4+</h1>
-                  <p className="text-xs text-muted-foreground text-center leading-tight">Completed Projects During Internship</p>
+                  <h1 className="text-2xl font-bold text-foreground mb-1">
+                    4+
+                  </h1>
+                  <p className="text-xs text-muted-foreground text-center leading-tight">
+                    Completed Projects During Internship
+                  </p>
                 </div>
               </div>
             </div>
