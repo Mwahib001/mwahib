@@ -96,7 +96,7 @@ export default function Contact() {
                 </h4>
                 <div className="flex space-x-4">
                   <a
-                    href="https://wa.me/923155021800"
+                    href="https://wa.me/923154545055"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary-foreground/90 hover:text-white transition-all duration-300 hover:scale-110"
