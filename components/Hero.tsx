@@ -62,7 +62,7 @@ export default function Hero() {
                     4+
                   </h1>
                   <p className="text-xs text-muted-foreground text-center leading-tight">
-                    Completed Projects During Internship
+                    Completed Projects of Clients
                   </p>
                 </div>
               </div>
