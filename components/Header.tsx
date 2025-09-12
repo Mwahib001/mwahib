@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -27,6 +27,32 @@ export default function Header() {
       setIsMenuOpen(false);
     }
   };
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
+
+  // Close menu on escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, [isMenuOpen]);
 
   return (
     <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-sm shadow-sm border-b border-border/50">
@@ -134,6 +160,47 @@ export default function Header() {
           </div>
         </div>
       </nav>
+
+      {/* Mobile Slide-Down Menu */}
+      <div className={`md:hidden fixed inset-0 z-40 transition-all duration-300 ${
+        isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+      }`}>
+        {/* Backdrop - Fixed to cover entire viewport */}
+        <div
+          className="fixed top-0 left-0 right-0 bottom-0 w-full h-full min-h-screen bg-black/60 z-30"
+          onClick={() => setIsMenuOpen(false)}
+        />
+
+        {/* Menu Content - Slides down from header */}
+        <div className={`absolute top-16 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border/50 shadow-lg transform transition-transform duration-300 z-50 ${
+          isMenuOpen ? 'translate-y-0' : '-translate-y-full'
+        }`}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div className="flex flex-col space-y-6">
+              {/* Menu Items */}
+              {navigation.map((item) => (
+                <a
+                  key={`mobile-${item.name}`}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="text-foreground hover:text-primary px-4 py-3 rounded-lg text-lg font-medium transition-all duration-200 hover:bg-accent/10 border border-transparent hover:border-border/50"
+                >
+                  {item.name}
+                </a>
+              ))}
+
+              {/* Contact Button */}
+              <a
+                href="#contact"
+                onClick={(e) => handleNavClick(e, '#contact')}
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-4 rounded-lg text-lg font-medium transition-all duration-200 text-center shadow-lg hover:shadow-xl"
+              >
+                Contact me
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
   );
 }
