@@ -18,7 +18,7 @@ export default function Hero() {
               MUHAMMAD WAHIB
             </h1>
             <h2 className="text-xl md:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent mb-6">
-              I AM Software Engineer
+              I am Final Year Student of BS Software Engineering
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               As a Software Engineer, I bring a strong engineering mindset into
