@@ -33,7 +33,7 @@ export default function Contact() {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <svg
-                    className="w-6 h-6 mr-4 text-primary-foreground/90"
+                    className="w-6 h-6 mr-4 text-primary-foreground/90 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
