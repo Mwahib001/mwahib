@@ -9,12 +9,12 @@
     "title": "Waqar Law Porfolio Website With PayloadCMS for Dynamic Content and Records Management",
     "description": "Integrated PayloadCMS with a custom frontend to enable dynamic content and records management, along with Cloudinary for media storage. Deployed on Vercel with MongoDB integration, showcasing expertise in full-stack CMS-driven solutions and scalable deployments.",
     "image": "/projects/waqarLawAdmin.png",
-    "link": "https://new-waqarlaw-com.vercel.app/admin"
+    "link": "https://github.com/Mwahib001/waqarlaw-images-public"
   },
   {
     "title": "Innovate Consults Portfolio Website",
     "description": "Created and integrated PayloadCMS to power dynamic content with role-based access control and Cloudinary for media storage. Deployed on Vercel with MongoDB database integration, ensuring a secure, scalable, and CMS-driven solution..",
     "image": "/projects/innovateConsultsAdmin.png",
-    "link": "https://new-innovateconsults-com.vercel.app/admin"
+    "link": "https://github.com/Mwahib001/innovate-consults-images-public"
   }
 ]
