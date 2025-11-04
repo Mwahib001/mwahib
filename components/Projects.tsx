@@ -26,7 +26,7 @@ export default function Projects() {
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src={project.image}
+                  src={`${process.env.NEXT_PUBLIC_BLOB_BASE_URL}${project.image}`}
                   alt={project.title}
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-500"

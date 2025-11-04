@@ -2,25 +2,25 @@
   {
     "title": "Pelican Canvas – Advanced Design Editor (Canva Clone)",
     "description": "Engineered a professional-grade design editor using React, TypeScript, and Fabric.js, replicating core Canva-like functionality. Implemented multi-page canvas management, intelligent frame-based image clipping, drag-and-drop asset handling, and multi-format export (PNG, JPG, PDF, SVG, ZIP). Designed custom object-fit cover algorithms, real-time frame detection, and SVG rasterization to achieve seamless, high-performance editing.",
-    "image": "/projects/wisepelican.png",
+    "image": "/wisepelican.png",
     "link": "https://github.com/Mwahib001/wise-pelican-canvas"
   },
   {
     "title": "Theme Bazaar Pro MUI Integration With PayloadCMS",
     "description": "Developed a custom integration of PayloadCMS with the Barzaar Pro theme to enable fully dynamic layouts and content management. This project highlights my ability to transform static templates into scalable, CMS-driven solutions for real-world e-commerce use cases.",
-    "image": "/projects/bazaarProAdmin.png",
+    "image": "/bazaarProAdmin.png",
     "link": "https://github.com/Mwahib001/bazaarpro-theme-admin-panel"
   },
   {
     "title": "Waqar Law Porfolio Website With PayloadCMS for Dynamic Content and Records Management",
     "description": "Integrated PayloadCMS with a custom frontend to enable dynamic content and records management, along with Cloudinary for media storage. Deployed on Vercel with MongoDB integration, showcasing expertise in full-stack CMS-driven solutions and scalable deployments.",
-    "image": "/projects/waqarLawAdmin.png",
+    "image": "/waqarLawAdmin.png",
     "link": "https://github.com/Mwahib001/waqarlaw-images-public"
   },
   {
     "title": "Innovate Consults Portfolio Website",
     "description": "Created and integrated PayloadCMS to power dynamic content with role-based access control and Cloudinary for media storage. Deployed on Vercel with MongoDB database integration, ensuring a secure, scalable, and CMS-driven solution..",
-    "image": "/projects/innovateConsultsAdmin.png",
+    "image": "/innovateConsultsAdmin.png",
     "link": "https://github.com/Mwahib001/innovate-consults-images-public"
   }
 ]
