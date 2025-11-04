@@ -1,5 +1,11 @@
 [
   {
+    "title": "Pelican Canvas – Advanced Design Editor (Canva Clone)",
+    "description": "Engineered a professional-grade design editor using React, TypeScript, and Fabric.js, replicating core Canva-like functionality. Implemented multi-page canvas management, intelligent frame-based image clipping, drag-and-drop asset handling, and multi-format export (PNG, JPG, PDF, SVG, ZIP). Designed custom object-fit cover algorithms, real-time frame detection, and SVG rasterization to achieve seamless, high-performance editing.",
+    "image": "/projects/wisepelican.png",
+    "link": "https://github.com/Mwahib001/wise-pelican-canvas"
+  },
+  {
     "title": "Theme Bazaar Pro MUI Integration With PayloadCMS",
     "description": "Developed a custom integration of PayloadCMS with the Barzaar Pro theme to enable fully dynamic layouts and content management. This project highlights my ability to transform static templates into scalable, CMS-driven solutions for real-world e-commerce use cases.",
     "image": "/projects/bazaarProAdmin.png",
