@@ -19,8 +19,14 @@
   },
   {
     "title": "Innovate Consults Portfolio Website",
-    "description": "Created and integrated PayloadCMS to power dynamic content with role-based access control and Cloudinary for media storage. Deployed on Vercel with MongoDB database integration, ensuring a secure, scalable, and CMS-driven solution..",
+    "description": "Created and integrated PayloadCMS to power dynamic content with role-based access control and Cloudinary for media storage. Deployed on Vercel with MongoDB database integration, ensuring a secure, scalable, and CMS-driven solution.",
     "image": "/innovateConsultsAdmin.png",
     "link": "https://github.com/Mwahib001/innovate-consults-images-public"
+  },
+  {
+    "title": "CoinVibe – Real-Time Crypto Tracker & News App",
+    "description": "A Flutter-based mobile app that delivers live cryptocurrency prices, personalized watchlists, and the latest crypto news — all powered by Firebase and CoinMarketCap APIs.",
+    "image": "/dashboard-screen.jpg",
+    "link": "https://github.com/Mwahib001/CoinVibe-Flutter"
   }
 ]
