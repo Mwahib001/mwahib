@@ -2,6 +2,18 @@
 import Image from "next/image";
 
 export default function Hero() {
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLButtonElement>,
+    href: string
+  ) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      // Update URL without page reload
+      window.history.pushState({}, "", href);
+    }
+  };
   return (
     <section
       id="home"
@@ -25,7 +37,10 @@ export default function Hero() {
               web development, creating scalable products with clean code,
               modern tools, and thoughtful architecture.
             </p>
-            <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-[0_0_15px] hover:shadow-primary/40">
+            <button
+              onClick={(e) => handleNavClick(e, "#contact")}
+              className="bg-primary hover:cursor-pointer hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-[0_0_15px] hover:shadow-primary/40"
+            >
               Contact
             </button>
           </div>
