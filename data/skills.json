@@ -1,54 +1,44 @@
 [
   {
     "title": "Full-Stack Web Development",
-    "description": "I build full-stack apps using MERN & Next.js, including clones and custom business apps.",
-    "link": "#contact"
+    "description": "I build full-stack apps using MERN & Next.js, including clones and custom business apps."
   },
 
   {
     "title": "CMS & Integrations",
-    "description": "Strong experience with Payload & Strapi, Cloudinary media handling, and authentication systems (Nodemailer, Firebase).",
-    "link": "#contact"
+    "description": "Strong experience with Payload & Strapi, Cloudinary media handling, and authentication systems (Nodemailer, Firebase)."
   },
   {
     "title": "Backend & APIs",
-    "description": "I create scalable backends with Express.js, Payload CMS, Strapi, and integrate third-party APIs (CoinGecko, WHMCS).",
-    "link": "#contact"
+    "description": "I create scalable backends with Express.js, Payload CMS, Strapi, and integrate third-party APIs (CoinGecko, WHMCS)."
   },
   {
     "title": "Databases",
-    "description": "Experienced with MongoDB, PostgreSQL, and Redis for high-performance, reliable data management.",
-    "link": "#contact"
+    "description": "Experienced with MongoDB, PostgreSQL, and Redis for high-performance, reliable data management."
   },
 
   {
     "title": "Frontend & UI/UX",
-    "description": "I design responsive, animated interfaces with React, Tailwind, and shadcn/ui, delivering clean and modern user experiences.",
-    "link": "#contact"
+    "description": "I design responsive, animated interfaces with React, Tailwind, and shadcn/ui, delivering clean and modern user experiences."
   },
   {
     "title": "DevOps & Deployment",
-    "description": "Deployed apps on GitHub and CMS hosting setups, managed branches, and automated cloud integrations. Managed teams of 3+ members on Github.",
-    "link": "#contact"
+    "description": "Deployed apps on GitHub and CMS hosting setups, managed branches, and automated cloud integrations. Managed teams of 3+ members on Github."
   },
   {
     "title": "Problem-Solving",
-    "description": "Skilled in debugging complex issues with Redis, Medusa, Payload CMS, and frontend styling in Next.js.",
-    "link": "#contact"
+    "description": "Skilled in debugging complex issues with Redis, Medusa, Payload CMS, and frontend styling in Next.js."
   },
   {
     "title": "Mobile & Flutter",
-    "description": "Built a crypto app with live charts, market insights, and Firebase auth, improving financial tracking for users.",
-    "link": "#contact"
+    "description": "Built a crypto app with live charts, market insights, and Firebase auth, improving financial tracking for users."
   },
   {
     "title": "Blockchain",
-    "description": "Exploring smart contracts, Layer 2 scaling, and dApps, with hands-on experience in ERC-4337 wallets & IPFS integration.",
-    "link": "#contact"
+    "description": "Exploring smart contracts, Layer 2 scaling, and dApps, with hands-on experience in ERC-4337 wallets & IPFS integration."
   },
   {
     "title": "Soft Skills",
-    "description": "Strong self-learner, adaptable across stacks (MERN, Flutter, Blockchain), and effective in researching & solving problems.",
-    "link": "#contact"
+    "description": "Strong self-learner, adaptable across stacks (MERN, Flutter, Blockchain), and effective in researching & solving problems."
   }
 ]

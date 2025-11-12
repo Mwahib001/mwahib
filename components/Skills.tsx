@@ -36,7 +36,7 @@ export default function Skills() {
                   {skill.description}
                 </p>
               </div>
-              <div className="pt-2 mt-auto">
+              {/* <div className="pt-2 mt-auto">
                 <a
                   href="#"
                   onClick={handleContactScroll}
@@ -44,7 +44,7 @@ export default function Skills() {
                 >
                   <span className="group-hover:translate-x-1 transition-transform">Contact Me →</span>
                 </a>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
